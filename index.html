@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <title>ATOMCRAFT | SkyBlock Szerver</title>
+<meta charset="UTF-8">
+<title>ATOMCRAFT | SkyBlock Szerver</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Discord ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script>
+// ===== ALAP VÉDELMI FUNKCIÓK =====
+
+// Jobb klikk tiltás
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// Billentyűkombók tiltása
+document.addEventListener("keydown", function(e) {
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key)) ||
+        (e.ctrlKey && e.key === "U")
+    ) {
+        e.preventDefault();
+        alert("⚠️ Az oldal védett!");
+    }
+});
+
+// Gyanús aktivitás figyelés
+let spam = 0;
+document.addEventListener("click", () => {
+    spam++;
+    if (spam > 40) {
+        alert("⚠️ Gyanús aktivitás érzékelve!");
+        spam = 0;
+    }
+});
+</script>
+
 </head>
 <body>
 
@@ -25,25 +53,24 @@
 
 <section id="hero">
     <h2>Üdvözlünk az ATOMCRAFT SkyBlock világában!</h2>
-    <p>Építsd fel a szigeted, fejlődj, kereskedj és urald a ranglistát!</p>
+    <p>Biztonságos • Stabil • Prémium élmény</p>
 </section>
 
-<!-- DISCORD GOMB -->
 <section class="discord-section">
     <a href="https://discord.gg/7ZqPzac25T" target="_blank" class="discord-button">
         <i class="fab fa-discord"></i>
-        <span>Csatlakozz a Discord szerverünkhöz</span>
+        <span>Csatlakozz a Discordra</span>
     </a>
 </section>
 
 <section id="info" class="box">
     <h2>ℹ️ Szerver Információ</h2>
     <ul>
-        <li>✔ Klasszikus SkyBlock élmény</li>
-        <li>✔ Gazdaság, aukció, bolt</li>
-        <li>✔ Egyedi rangok és jutalmak</li>
-        <li>✔ Aktív staff csapat</li>
-        <li>✔ Folyamatos fejlesztések</li>
+        <li>✔ SkyBlock rendszer</li>
+        <li>✔ Gazdaság & rangok</li>
+        <li>✔ Aktív staff</li>
+        <li>✔ Védelem & stabilitás</li>
+        <li>✔ Verzió: <strong>1.21.7</strong></li>
     </ul>
 </section>
 
@@ -51,9 +78,9 @@
     <h2>🛒 Vásárlás</h2>
 
     <div class="vip-card">
-        <img src="vip.png" alt="VIP Rang">
+        <img src="vip.png" alt="VIP">
         <h3>VIP Rang</h3>
-        <p>Exkluzív parancsok, extra jutalmak és kiemelt státusz!</p>
+        <p>Exkluzív parancsok és jutalmak</p>
         <span class="price">5000 Ft</span>
         <button onclick="openModal()">Megvásárlom</button>
     </div>
@@ -62,49 +89,36 @@
 <section id="connect" class="box">
     <h2>🎮 Csatlakozás</h2>
     <p><strong>IP:</strong> play.atomcraft.hu</p>
-    <p><strong>Verzió:</strong> 1.8 – 1.20+</p>
+    <p><strong>Verzió:</strong> 1.21.7</p>
 </section>
 
 <footer>
-    <p>© 2026 ATOMCRAFT | SkyBlock Szerver</p>
+    <p>© 2026 ATOMCRAFT |</p>
 </footer>
 
-<!-- FIZETÉSI MODAL -->
-
+<!-- MODAL -->
 <div id="paymentModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">×</span>
+<div class="modal-content">
+<span class="close" onclick="closeModal()">×</span>
 
-        <h2>💳 VIP Rang Vásárlás</h2>
+<h2>💳 VIP Rang Vásárlás</h2>
+<p><strong>Ár:</strong> 5000 Ft</p>
 
-        <p><strong>Termék:</strong> VIP Rang</p>
-        <p><strong>Ár:</strong> 5000 Ft</p>
+<div class="pay-box">
+<p>Számlaszám:</p>
+<code>12773456-02517289</code>
 
-        <div class="pay-box">
-            <p><strong>Bankkártyás / Azonnali utalás</strong></p>
+<p>Közlemény:</p>
+<code>ATOMCRAFT VIP - Játékosnév</code>
+</div>
 
-            <p>Számlaszám:</p>
-            <code>12773456-02517289</code>
-
-            <p>Közlemény:</p>
-            <code>ATOMCRAFT VIP - Játékosnév</code>
-        </div>
-
-        <p class="small">
-            Fizetés után a VIP rang jóváírásra kerül a megadott játékosnévre.
-        </p>
-
-        <button onclick="closeModal()">Rendben</button>
-    </div>
+<button onclick="closeModal()">Rendben</button>
+</div>
 </div>
 
 <script>
-function openModal() {
-    document.getElementById("paymentModal").style.display = "block";
-}
-function closeModal() {
-    document.getElementById("paymentModal").style.display = "none";
-}
+function openModal(){document.getElementById("paymentModal").style.display="block";}
+function closeModal(){document.getElementById("paymentModal").style.display="none";}
 </script>
 
 </body>
