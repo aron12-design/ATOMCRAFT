@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>ATOMCRAFT | SkyBlock Szerver</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Discord ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1>ATOMCRAFT</h1>
+    <p>SkyBlock Minecraft Szerver</p>
+</header>
+
+<nav>
+    <a href="#info">Információ</a>
+    <a href="#shop">Vásárlás</a>
+    <a href="#connect">Csatlakozás</a>
+</nav>
+
+<section id="hero">
+    <h2>Üdvözlünk az ATOMCRAFT SkyBlock világában!</h2>
+    <p>Építsd fel a szigeted, fejlődj, kereskedj és urald a ranglistát!</p>
+</section>
+
+<!-- DISCORD GOMB -->
+<section class="discord-section">
+    <a href="https://discord.gg/7ZqPzac25T" target="_blank" class="discord-button">
+        <i class="fab fa-discord"></i>
+        <span>Csatlakozz a Discord szerverünkhöz</span>
+    </a>
+</section>
+
+<section id="info" class="box">
+    <h2>ℹ️ Szerver Információ</h2>
+    <ul>
+        <li>✔ Klasszikus SkyBlock élmény</li>
+        <li>✔ Gazdaság, aukció, bolt</li>
+        <li>✔ Egyedi rangok és jutalmak</li>
+        <li>✔ Aktív staff csapat</li>
+        <li>✔ Folyamatos fejlesztések</li>
+    </ul>
+</section>
+
+<section id="shop" class="box shop">
+    <h2>🛒 Vásárlás</h2>
+
+    <div class="vip-card">
+        <img src="vip.png" alt="VIP Rang">
+        <h3>VIP Rang</h3>
+        <p>Exkluzív parancsok, extra jutalmak és kiemelt státusz!</p>
+        <span class="price">5000 Ft</span>
+        <button onclick="openModal()">Megvásárlom</button>
+    </div>
+</section>
+
+<section id="connect" class="box">
+    <h2>🎮 Csatlakozás</h2>
+    <p><strong>IP:</strong> play.atomcraft.hu</p>
+    <p><strong>Verzió:</strong> 1.8 – 1.20+</p>
+</section>
+
+<footer>
+    <p>© 2026 ATOMCRAFT | SkyBlock Szerver</p>
+</footer>
+
+<!-- FIZETÉSI MODAL -->
+
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+
+        <h2>💳 VIP Rang Vásárlás</h2>
+
+        <p><strong>Termék:</strong> VIP Rang</p>
+        <p><strong>Ár:</strong> 5000 Ft</p>
+
+        <div class="pay-box">
+            <p><strong>Bankkártyás / Azonnali utalás</strong></p>
+
+            <p>Számlaszám:</p>
+            <code>12773456-02517289</code>
+
+            <p>Közlemény:</p>
+            <code>ATOMCRAFT VIP - Játékosnév</code>
+        </div>
+
+        <p class="small">
+            Fizetés után a VIP rang jóváírásra kerül a megadott játékosnévre.
+        </p>
+
+        <button onclick="closeModal()">Rendben</button>
+    </div>
+</div>
+
+<script>
+function openModal() {
+    document.getElementById("paymentModal").style.display = "block";
+}
+function closeModal() {
+    document.getElementById("paymentModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

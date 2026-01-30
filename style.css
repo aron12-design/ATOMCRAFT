@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #3b1c5a, #120016);
+    color: #eee;
+}
+
+header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(90deg, #7a3cff, #b44cff);
+    box-shadow: 0 0 25px #7a3cff;
+}
+
+header h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #1b0026;
+    padding: 15px;
+}
+
+nav a {
+    color: #cda8ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* DISCORD */
+
+.discord-section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.discord-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(90deg, #5865F2, #8a6cff);
+    padding: 15px 30px;
+    border-radius: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 0 25px #7a6cff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.discord-button i {
+    font-size: 28px;
+}
+
+.discord-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #b44cff;
+}
+
+.box {
+    background: rgba(255,255,255,0.05);
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 900px;
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(180,76,255,0.3);
+}
+
+.box h2 {
+    margin-bottom: 20px;
+    color: #d9b6ff;
+}
+
+.box ul {
+    list-style: none;
+}
+
+.box ul li {
+    margin: 10px 0;
+}
+
+.shop {
+    text-align: center;
+}
+
+.vip-card {
+    background: linear-gradient(180deg, #2b003d, #4b1b6a);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 350px;
+    margin: auto;
+    box-shadow: 0 0 35px #b44cff;
+}
+
+.vip-card img {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.vip-card h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    font-size: 22px;
+    color: #ffd6ff;
+    margin: 15px 0;
+}
+
+button {
+    background: #b44cff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 0 15px #b44cff;
+}
+
+button:hover {
+    background: #d67cff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #120016;
+    color: #aaa;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+}
+
+.modal-content {
+    background: linear-gradient(180deg, #2b003d, #4b1b6a);
+    max-width: 420px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px #b44cff;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.pay-box {
+    background: rgba(0,0,0,0.35);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.pay-box code {
+    display: block;
+    background: #120016;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border-radius: 8px;
+    color: #ffd6ff;
+}
+
+.small {
+    font-size: 13px;
+    color: #ddd;
+}
